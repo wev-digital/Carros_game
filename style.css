@@ -6,11 +6,12 @@
 
 body{
     font-family: 'Courier New', Courier, monospace;
-    background-image: url();
+    background-image: url(https://picfiles.alphacoders.com/584/thumb-1920-584394.jpg);
     background-attachment: fixed;
     background-position: center;
     color: rgb(255, 255, 255);
     background-size: cover;
+    overflow-x: hidden; 
 }
 
 nav{
@@ -23,6 +24,7 @@ nav{
     height: 8vh;
 }
 
+/*!Parte da logo*/
 .nav_logo{
     justify-content: center;
     align-items: center;
@@ -30,11 +32,11 @@ nav{
     transition: 0.5s;
 }
 .nav_logo:hover{
-    color: rgb(255, 0, 191);
+    color: rgb(0, 119, 255);
     transform: scale(1.2);
 }
 .nav_logo span{
-    color: rgb(255, 0, 191);
+    color: rgb(0, 119, 255);
     margin: 15px;
     font-size: 25px;
 }
@@ -43,6 +45,7 @@ nav{
     font-size: 25px;
 }
 
+/*!Parte do button invisivel*/
 .nav_button{
     justify-content: center;
     align-items: center;
@@ -59,10 +62,11 @@ nav{
     transition: 0.5s;
 }
 .nav_button button:hover{
-    border-color: rgb(255, 0, 191);
-    color: rgb(255, 0, 191);
+    border-color: rgb(0, 119, 255);
+    color: rgb(0, 119, 255);
 }
 
+/*!Parte das listas de opções*/
 .nav_listas{
     justify-content: center;
     align-items: center;
@@ -83,16 +87,58 @@ nav{
     transition: 0.5s;
 }
 .nav_listas ul li a:hover{
-    color: rgb(255, 0, 191);
+    color: rgb(0, 119, 255);
     transform: scale(1.2);
 }
 .nav_listas ul li a span{
     margin-left: 5px;
 }
 
+/*!Parte do conteúdo da web*/
+main{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.content_video video{
+    position: relative;
+    object-fit: cover;
+    width: 100vw;
+    height: 95vh;
+    z-index: -1;
+}
+
+.video_text{
+    position: absolute;
+    margin-left: 30px;
+    text-align: center;
+    transition: 0.5s;
+    top: 70%;
+}
+.video_text h1{
+    font-size: 40px;
+}
+.video_text button{
+    box-shadow: 2px 1px rgb(0, 119, 255);
+    border-color: rgb(255, 255, 255);
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 400px;
+    width: 60vw;
+    height: 10vh;
+}
+
+
+/*!PARTE MOBILE*/
 @media (max-width: 720px){
+    /*!Parte das listas*/
     .nav_listas{
-        background-color: rgba(0, 0, 0, 0.952);
+        background-color: rgba(0, 0, 0, 0.938);
         flex-direction: column;
         position: absolute;
         margin-top: 10px;
@@ -100,7 +146,7 @@ nav{
         width: 100%;
         height: 100%;
         z-index: 1;
-        top: 8vw;
+        top: 10vw;
     }
     .nav_listas ul{
         margin-left: 10px;
@@ -114,8 +160,17 @@ nav{
         transform: scale(1.1);
     }
 
+    /*!Parte do botão mobile*/
     .nav_button button{
         display: block
+    }
+
+    /*!Parte do video*/
+    .content_video video{
+        object-fit: cover;
+        width: 100vw;
+        height: 92vh;
+        z-index: -1;
     }
 }
 
