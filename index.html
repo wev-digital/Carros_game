@@ -7,80 +7,59 @@
     <title>Car Shop</title>
 </head>
 <body>
-    <thead>
-        <nav>
-            <div class="nav_logo">
-                <span class="icons"><ion-icon name="logo-flickr"></ion-icon></span>
-                <h1>Logo</h1>
-            </div>
-            <div class="nav_button">
-                <button onclick="menu_mobile()">&#9776</button>
-            </div>
-            <div class="nav_listas">
-                <ul class="ul_lista">
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="home-outline"></ion-icon></span>
-                            <span class="text">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="car-sport-outline"></ion-icon></span>
-                            <span class="text">Modelos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="car-outline"></ion-icon></span>
-                            <span class="text">Tipos</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="cash-outline"></ion-icon></span>
-                            <span class="text">Preços</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="location-outline"></ion-icon></span>
-                            <span class="text">Localização</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="git-compare-outline"></ion-icon></span>
-                            <span class="text">Comparações</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="newspaper-outline"></ion-icon></span>
-                            <span class="text">Notícias</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="icons"><ion-icon name="help-circle-outline"></ion-icon></span>
-                            <span class="text">Ajuda</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </thead>
+    <nav>
+        <div class="nav_logo">
+            <span class="icons"><ion-icon name="logo-flickr"></ion-icon></span>
+            <h1>Carros</h1>
+        </div>
+        <div class="nav_button">
+            <button onclick="menu_mobile()">&#9776;</button>
+        </div>
+        <div class="nav_listas">
+            <ul class="ul_lista">
+                <li><a href=""><span class="icons"><ion-icon name="home-outline"></ion-icon></span><span class="text">Home</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="car-sport-outline"></ion-icon></span><span class="text">Modelos</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="car-outline"></ion-icon></span><span class="text">Tipos</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="cash-outline"></ion-icon></span><span class="text">Preços</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="location-outline"></ion-icon></span><span class="text">Localização</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="git-compare-outline"></ion-icon></span><span class="text">Comparações</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="newspaper-outline"></ion-icon></span><span class="text">Notícias</span></a></li>
+                <li><a href=""><span class="icons"><ion-icon name="help-circle-outline"></ion-icon></span><span class="text">Ajuda</span></a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
-        <div class="main_content">
-            <div class="content_video">
-                <video width="560" height="315" autoplay muted loop>
-                    <source src="Videos/232685_small.mp4" type="video/mp4">
-                </video>
-                <div class="video_text">
-                    <h1>Modelos Icônicos</h1>
-                    <button type="button">Configurar Modelos</button>
-                </div>
+        <div class="content_video">
+            <video width="560" height="315" autoplay muted loop>
+                <source src="https://cdn.pixabay.com/video/2024/09/22/232685_large.mp4" type="video/mp4">
+            </video>
+            <div class="video_text">
+                <h1>Modelos Icônicos</h1>
+                <button type="button">Configurar Modelos</button>
             </div>
+        </div>
+        <div class="content_modelos">
+            <h1>Modelos Novos</h1>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="https://wallpapers.com/images/hd/majestic-maserati-mc20-in-full-glory-mtr0z5szwpdgcsgv.jpg" alt="Modelo-1">
+                        <label for="" style="color: rgb(0, 68, 255);">maserati</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://wallpapers.com/images/hd/lamborghini-phone-n3f5fjloamk8nrfw.jpg" alt="Modelo">
+                        <label for="" style="color: green;">lamborghini</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://save.zerowallpaper.com/mobilewallpaper/hdv/ferrari_racing_car-4960.webp" alt="Modelo">
+                        <label for="" style="color: red;">ferrari</label>
+                    </a>
+                </li>
+            </ul>
         </div>
     </main>
     

@@ -1,109 +1,112 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
-    background-image: url(https://picfiles.alphacoders.com/584/thumb-1920-584394.jpg);
-    background-attachment: fixed;
-    background-position: center;
+    background-color: rgb(0, 0, 0);
+    text-transform: uppercase;
     color: rgb(255, 255, 255);
-    background-size: cover;
     overflow-x: hidden; 
 }
 
-nav{
+nav {
     background-color: rgb(0, 0, 0);
-    justify-content: space-around;
-    text-transform: uppercase;
-    align-items: center;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 8vh;
 }
 
-/*!Parte da logo*/
-.nav_logo{
-    justify-content: center;
-    align-items: center;
+/* Parte da logo */
+.nav_logo {
     display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s;
 }
-.nav_logo:hover{
+
+.nav_logo:hover {
     color: rgb(0, 119, 255);
     transform: scale(1.2);
 }
-.nav_logo span{
+
+.nav_logo span {
     color: rgb(0, 119, 255);
     margin: 15px;
-    font-size: 25px;
-}
-.nav_logo h1{
-    letter-spacing: 7px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
-/*!Parte do button invisivel*/
-.nav_button{
+.nav_logo h1 {
+    letter-spacing: 7px;
+    font-size: 30px;
+}
+
+/* Parte do botão invisível */
+.nav_button {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
-.nav_button button{
-    border-color: rgb(255, 255, 255);
+
+.nav_button button {
+    display: none;
+    width: 15vw;
+    border: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     color: rgb(255, 255, 255);
     border-radius: 5px;
-    font-size: 20px;
-    display: none;
-    width: 10vw;
+    font-size: 25px;
     transition: 0.5s;
 }
-.nav_button button:hover{
+
+.nav_button button:hover {
     border-color: rgb(0, 119, 255);
     color: rgb(0, 119, 255);
 }
 
-/*!Parte das listas de opções*/
-.nav_listas{
+/* Parte das listas de opções */
+.nav_listas {
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
 }
-.nav_listas ul{
+
+.nav_listas ul {
     display: inline-flex;
 }
-.nav_listas ul li{
+
+.nav_listas ul li {
     list-style: none;
     margin: 20px;
 }
-.nav_listas ul li a{
+
+.nav_listas ul li a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
-    display: flex;
     transition: 0.5s;
 }
-.nav_listas ul li a:hover{
+
+.nav_listas ul li a:hover {
     color: rgb(0, 119, 255);
-    transform: scale(1.2);
 }
-.nav_listas ul li a span{
+
+.nav_listas ul li a span {
     margin-left: 5px;
 }
 
-/*!Parte do conteúdo da web*/
-main{
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
+/* Parte do conteúdo da web */
+main {
+    display: block;
     width: 100%;
     height: 100%;
 }
 
-.content_video video{
+.content_video video {
     position: relative;
     object-fit: cover;
     width: 100vw;
@@ -111,20 +114,22 @@ main{
     z-index: -1;
 }
 
-.video_text{
+.video_text {
     position: absolute;
     margin-left: 30px;
     text-align: center;
     transition: 0.5s;
     top: 70%;
 }
-.video_text h1{
+
+.video_text h1 {
     font-size: 40px;
 }
-.video_text button{
-    box-shadow: 2px 1px rgb(0, 119, 255);
-    border-color: rgb(255, 255, 255);
-    background-color: transparent;
+
+.video_text button {
+    box-shadow: 2px 1px rgb(0, 132, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgb(0, 174, 255);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-top: 10px;
@@ -133,44 +138,111 @@ main{
     height: 10vh;
 }
 
+.content_modelos{
+    text-align: center;
+    display: block;
+}
 
-/*!PARTE MOBILE*/
-@media (max-width: 720px){
-    /*!Parte das listas*/
-    .nav_listas{
-        background-color: rgba(0, 0, 0, 0.938);
+.content_modelos h1{
+    margin: 20px;
+}
+
+.content_modelos ul{
+    justify-content: space-around;
+    list-style: none;
+    display: flex;
+}
+
+.content_modelos ul li{
+    margin: 20px;
+    width: 30vw;
+    height: 70vh;
+}
+
+.content_modelos ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.content_modelos ul li img{
+    border-radius: 20px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content_modelos ul li label{
+    font-size: 20px;
+}
+
+/* Parte mobile */
+@media (max-width: 720px) {
+    .nav_listas {
+        background-color: rgba(0, 0, 0, 0.897);
         flex-direction: column;
         position: absolute;
         margin-top: 10px;
         display: none;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         z-index: 1;
-        top: 10vw;
+        top: 6%;
     }
-    .nav_listas ul{
+
+    .nav_listas ul {
         margin-left: 10px;
         display: block;
     }
-    .nav_listas ul li a{
+
+    .nav_listas ul li a {
         font-size: 18px;
-        transition: 0.5s;
     }
-    .nav_listas ul li a:hover{
+
+    .nav_listas ul li a:hover {
         transform: scale(1.1);
     }
 
-    /*!Parte do botão mobile*/
-    .nav_button button{
-        display: block
+    .nav_button button {
+        display: block;
     }
 
-    /*!Parte do video*/
-    .content_video video{
+    /*!Parte dos modelos de carros*/
+    .content_modelos {
+        text-align: center;
+        display: block;
+    }
+    
+    .content_modelos h1 {
+        margin: 20px;
+    }
+    
+    .content_modelos ul {
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+    
+    .content_modelos ul li {
+        margin-top: 20px;
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .content_modelos ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    
+    .content_modelos ul li img {
+        border-radius: 20px;
         object-fit: cover;
-        width: 100vw;
-        height: 92vh;
-        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .content_modelos ul li label {
+        font-size: 20px;
     }
 }
-
